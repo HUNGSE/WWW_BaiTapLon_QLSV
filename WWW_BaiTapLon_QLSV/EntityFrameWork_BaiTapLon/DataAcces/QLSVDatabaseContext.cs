@@ -22,6 +22,7 @@ namespace EntityFrameWork_BaiTapLon.DataAcces
     public DbSet<GiangVien> GiangViens { get; set; }
     public DbSet<HocKy> HocKies { get; set; }
     public DbSet<KhoaHoc> KhoaHocs { get; set; }
+    public DbSet<Diemdanh> Diemdanhs { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
