@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
-using System.ServiceModel;
 using System.Text;
 
 namespace Services_BaiTapLon
@@ -13,13 +12,13 @@ namespace Services_BaiTapLon
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "DiemDanhService1" in both code and config file together.
     public class DiemDanhService : IDiemDanhService
     {
-        private IQSinhVienRepository<Diemdanh> diemdanhrepository;
+        private IQSinhVienRepository<DiemDanh> diemdanhrepository;
 
         public DiemDanhService()
         {
-            diemdanhrepository = new QLSinhVienRepository<Diemdanh>();
+            diemdanhrepository = new QLSinhVienRepository<DiemDanh>();
         }
-        public Diemdanh Add(Diemdanh dd)
+        public DiemDanh Add(DiemDanh dd)
         {
             return diemdanhrepository.Add(dd);
         }
@@ -37,15 +36,15 @@ namespace Services_BaiTapLon
             }
         }
 
-        public IEnumerable<Diemdanh> GetAll()
+        public IEnumerable<DiemDanh> GetAll()
         {
             return diemdanhrepository.GetByWhere(s => true);
         }
-        public IEnumerable<Diemdanh> getbyidSV(int Idsv)
+        public IEnumerable<DiemDanh> GetbyIDSV(int idSV)
         {
-            return diemdanhrepository.GetByWhere(s => s.SinhVienId == Idsv);
+            return diemdanhrepository.GetByWhere(s => s.SinhVienId == idSV);
         }
-        public Diemdanh getById(object id)
+        public DiemDanh getById(object id)
         {
             throw new NotImplementedException();
         }

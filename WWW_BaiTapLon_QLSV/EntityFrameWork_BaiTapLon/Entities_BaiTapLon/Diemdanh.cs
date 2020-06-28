@@ -8,15 +8,17 @@ using System.Threading.Tasks;
 
 namespace EntityFrameWork_BaiTapLon.Entities_BaiTapLon
 {
-    public class Diemdanh
+    public class DiemDanh
     {
-        [Column(Order = 2)]
-        public virtual int LopHocPhanId { get; set; }
         [Column(Order = 1)]
-        public virtual int SinhVienId { get; set; }
-        public string trangthai { get; set; }
-        public virtual DateTime ngayDD { get; set; }
+        public int SinhVienId { get; set; }
+
+        [Column(Order = 2)]
+        public int LopHocPhanId { get; set; }
         [Key]
-         public int KqHTid { get; set; }
+        public virtual int idDD { get; set; }
+        public DateTime ngayDD { get; set; }
+        public string Trgthai { get; set; }
+        public virtual KetQuaHocTap Ketquahoctap { get; set; } 
     }
 }

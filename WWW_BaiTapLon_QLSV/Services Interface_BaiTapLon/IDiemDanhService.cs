@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Services_Interface_BaiTapLon
 {
-    public interface IDiemDanhService : IBaseService<Diemdanh>
+    public interface IDiemDanhService : IBaseService<DiemDanh>
     {
-        Diemdanh Add(Diemdanh dd);
+        DiemDanh Add(DiemDanh dd);
         bool delete(int KqhtId);
     }
 }
