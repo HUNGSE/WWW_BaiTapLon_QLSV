@@ -1,0 +1,25 @@
+﻿@model List<EntityFrameWork_BaiTapLon.Entities_BaiTapLon.DiemDanh>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<h3>NGAY DIEM DANH CUA SINH VIEN @ViewBag.ten</h3>
+<p> Mon hoc: @ViewBag.mon</p>
+<table class="table">
+    <tr>
+        <th>ID Ket qua hoc tap</th>
+        <th>Ngay Diem Danh</th>
+        <th>Trang Thai</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.kqhtID</td>
+            <td>@item.ngayDD</td>
+            <td>@item.tragthai</td>
+        </tr>
+    }
+

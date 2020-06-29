@@ -6,20 +6,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace EntityFrameWork_BaiTapLon.Entities_BaiTapLon
 {
     public class KetQuaHocTap
     {
-        public int LoaiDiem { get; set; }
-        [Key]
-        [Column(Order = 1)]
+        public double ThuongKy { get; set; }
+        public double GiuaKy { get; set; }
+        public double CuoiKy { get; set; }
         public int SinhVienId { get; set; }
         public virtual SinhVien SinhVien { get; set; }
-        [Key]
-        [Column(Order = 2)]
         public int LopHocPhanId { get; set; }
         public virtual LopHocPhan LopHocPhan { get; set; }
-        public virtual  int idDD {get; set;}
-      
+        [Key]
+        public int kqhtID { get; set; }
+        
+
+
     }
 }

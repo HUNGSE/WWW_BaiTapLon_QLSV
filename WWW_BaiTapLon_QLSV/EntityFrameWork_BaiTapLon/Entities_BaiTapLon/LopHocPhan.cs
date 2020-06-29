@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace EntityFrameWork_BaiTapLon.Entities_BaiTapLon
 {
     public class LopHocPhan

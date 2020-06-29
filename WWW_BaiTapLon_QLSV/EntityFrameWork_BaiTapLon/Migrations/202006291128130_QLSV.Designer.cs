@@ -7,13 +7,13 @@ namespace EntityFrameWork_BaiTapLon.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class SinhVien : IMigrationMetadata
+    public sealed partial class QLSV : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(SinhVien));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(QLSV));
         
         string IMigrationMetadata.Id
         {
-            get { return "202006271616394_SinhVien"; }
+            get { return "202006291128130_QLSV"; }
         }
         
         string IMigrationMetadata.Source

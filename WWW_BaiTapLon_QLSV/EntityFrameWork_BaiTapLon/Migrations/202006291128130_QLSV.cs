@@ -3,22 +3,10 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class SinhVien : DbMigration
+    public partial class QLSV : DbMigration
     {
         public override void Up()
         {
-            CreateTable(
-                "dbo.Diemdanhs",
-                c => new
-                    {
-                        SinhVienId = c.Int(nullable: false),
-                        LopHocPhanId = c.Int(nullable: false),
-                        KqHTid = c.Int(nullable: false, identity: true),
-                        trangthai = c.String(),
-                        ngayDD = c.DateTime(nullable: false),
-                    })
-                .PrimaryKey(t => t.KqHTid);
-            
             CreateTable(
                 "dbo.GiangViens",
                 c => new
@@ -72,10 +60,9 @@
                     {
                         SinhVienId = c.Int(nullable: false),
                         LopHocPhanId = c.Int(nullable: false),
-                        KqHTid = c.Int(nullable: false, identity: true),
                         LoaiDiem = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.KqHTid)
+                .PrimaryKey(t => new { t.SinhVienId, t.LopHocPhanId })
                 .ForeignKey("dbo.LopHocPhans", t => t.LopHocPhanId, cascadeDelete: true)
                 .ForeignKey("dbo.SinhViens", t => t.SinhVienId, cascadeDelete: true)
                 .Index(t => t.SinhVienId)
@@ -142,7 +129,6 @@
             DropTable("dbo.HocKies");
             DropTable("dbo.LopHocPhans");
             DropTable("dbo.GiangViens");
-            DropTable("dbo.Diemdanhs");
         }
     }
 }

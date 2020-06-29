@@ -44,13 +44,23 @@ namespace Services_BaiTapLon
         {
             return ketquahoctaprepository.GetById(id);
         }
+        public int getIDkqht(int svid,int lhpid)
+        {
+            var a = ketquahoctaprepository.GetByWhere(s => (s.SinhVienId == svid && s.LopHocPhanId == lhpid));
+            if (a!=null){
+                return a.FirstOrDefault().kqhtID;
+            }
+            return 0;
+        }
 
         public KetQuaHocTap Update(KetQuaHocTap kqht)
         {
             var exting = ketquahoctaprepository.GetById(kqht.SinhVienId);
             if (exting != null)
             {
-                exting.LoaiDiem = kqht.LoaiDiem;
+                exting.ThuongKy = kqht.ThuongKy;
+                exting.GiuaKy = kqht.GiuaKy;
+                exting.CuoiKy = kqht.CuoiKy;
                 exting.LopHocPhanId = kqht.LopHocPhanId;
                 ketquahoctaprepository.Update(exting);
             }

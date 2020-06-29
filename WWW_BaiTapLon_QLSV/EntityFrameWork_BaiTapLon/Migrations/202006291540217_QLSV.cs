@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class SinhVien : DbMigration
+    public partial class QLSV : DbMigration
     {
         public override void Up()
         {
@@ -11,26 +11,26 @@
                 "dbo.DiemDanhs",
                 c => new
                     {
-                        SinhVienId = c.Int(nullable: false),
-                        LopHocPhanId = c.Int(nullable: false),
-                        idDD = c.Int(nullable: false, identity: true),
+                        kqhtID = c.Int(nullable: false),
                         ngayDD = c.DateTime(nullable: false),
-                        Trgthai = c.String(),
+                        tragthai = c.String(),
                     })
-                .PrimaryKey(t => t.idDD)
-                .ForeignKey("dbo.KetQuaHocTaps", t => new { t.SinhVienId, t.LopHocPhanId }, cascadeDelete: true)
-                .Index(t => new { t.SinhVienId, t.LopHocPhanId });
+                .PrimaryKey(t => new { t.kqhtID, t.ngayDD })
+                .ForeignKey("dbo.KetQuaHocTaps", t => t.kqhtID, cascadeDelete: true)
+                .Index(t => t.kqhtID);
             
             CreateTable(
                 "dbo.KetQuaHocTaps",
                 c => new
                     {
+                        kqhtID = c.Int(nullable: false, identity: true),
+                        ThuongKy = c.Double(nullable: false),
+                        GiuaKy = c.Double(nullable: false),
+                        CuoiKy = c.Double(nullable: false),
                         SinhVienId = c.Int(nullable: false),
                         LopHocPhanId = c.Int(nullable: false),
-                        LoaiDiem = c.Int(nullable: false),
-                        idDD = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => new { t.SinhVienId, t.LopHocPhanId })
+                .PrimaryKey(t => t.kqhtID)
                 .ForeignKey("dbo.LopHocPhans", t => t.LopHocPhanId, cascadeDelete: true)
                 .ForeignKey("dbo.SinhViens", t => t.SinhVienId, cascadeDelete: true)
                 .Index(t => t.SinhVienId)
@@ -125,7 +125,7 @@
         
         public override void Down()
         {
-            DropForeignKey("dbo.DiemDanhs", new[] { "SinhVienId", "LopHocPhanId" }, "dbo.KetQuaHocTaps");
+            DropForeignKey("dbo.DiemDanhs", "kqhtID", "dbo.KetQuaHocTaps");
             DropForeignKey("dbo.SinhViens", "KhoaHocID", "dbo.KhoaHocs");
             DropForeignKey("dbo.KetQuaHocTaps", "SinhVienId", "dbo.SinhViens");
             DropForeignKey("dbo.LopHocPhans", "MonHocId", "dbo.MonHocs");
@@ -138,7 +138,7 @@
             DropIndex("dbo.LopHocPhans", new[] { "MonHocId" });
             DropIndex("dbo.KetQuaHocTaps", new[] { "LopHocPhanId" });
             DropIndex("dbo.KetQuaHocTaps", new[] { "SinhVienId" });
-            DropIndex("dbo.DiemDanhs", new[] { "SinhVienId", "LopHocPhanId" });
+            DropIndex("dbo.DiemDanhs", new[] { "kqhtID" });
             DropTable("dbo.KhoaHocs");
             DropTable("dbo.SinhViens");
             DropTable("dbo.MonHocs");

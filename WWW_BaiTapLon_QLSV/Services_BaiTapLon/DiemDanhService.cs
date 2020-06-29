@@ -40,9 +40,13 @@ namespace Services_BaiTapLon
         {
             return diemdanhrepository.GetByWhere(s => true);
         }
-        public IEnumerable<DiemDanh> GetbyIDSV(int idSV)
+        public IEnumerable<DiemDanh> GetbyIDSV(int idsv,int idlhp)
         {
-            return diemdanhrepository.GetByWhere(s => s.SinhVienId == idSV);
+            KetQuaHocTapService kq = new KetQuaHocTapService();
+            int a = kq.getIDkqht(idsv, idlhp);
+            if (a!=0)
+                return diemdanhrepository.GetByWhere(s => s.kqhtID==a);
+            return null;
         }
         public DiemDanh getById(object id)
         {

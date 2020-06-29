@@ -10,15 +10,13 @@ namespace EntityFrameWork_BaiTapLon.Entities_BaiTapLon
 {
     public class DiemDanh
     {
-        [Column(Order = 1)]
-        public int SinhVienId { get; set; }
-
-        [Column(Order = 2)]
-        public int LopHocPhanId { get; set; }
         [Key]
-        public virtual int idDD { get; set; }
+        [Column(Order = 1)]
+        public int kqhtID { get; set; }
+        [Key]
+        [Column(Order =2)]
         public DateTime ngayDD { get; set; }
-        public string Trgthai { get; set; }
-        public virtual KetQuaHocTap Ketquahoctap { get; set; } 
+        public string tragthai { get; set; }
+        public virtual KetQuaHocTap ketquahoctap { get; set; }
     }
 }
