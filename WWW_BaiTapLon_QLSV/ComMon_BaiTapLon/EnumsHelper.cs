@@ -8,17 +8,23 @@ namespace ComMon_BaiTapLon
 {
     public class EnumsHelper
     {
-        public enum LoaiDiemEnum
+        public enum TrangThaiDD
         {
-            ThuongKy = 2,
-            GiuaKy = 3,
-            CuoiKy = 4
+            CoMat=1,
+            Vang=2
+        }
+        public enum TrangThaiLHP
+        {
+            Cho_SV_dang_ki =1,
+            Chap_Nhan_Mo_Lop=2,
+            Cho_Huy_Lop=3
+
         }
         public enum GioitinhEnum
         {
-            Nam=2,
-            Nu=3,
-            Khac=4
+            Nam =2,
+            Nu =3,
+            Khac=4,
         }
     }
 }

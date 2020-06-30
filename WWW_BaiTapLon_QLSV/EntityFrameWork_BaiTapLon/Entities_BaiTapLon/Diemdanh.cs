@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static ComMon_BaiTapLon.EnumsHelper;
 
 namespace EntityFrameWork_BaiTapLon.Entities_BaiTapLon
 {
@@ -15,8 +16,9 @@ namespace EntityFrameWork_BaiTapLon.Entities_BaiTapLon
         public int kqhtID { get; set; }
         [Key]
         [Column(Order =2)]
-        public DateTime ngayDD { get; set; }
-        public string tragthai { get; set; }
+        [DataType(DataType.DateTime)]
+        public DateTime ngayDD { get; set; }      
+        public TrangThaiDD tragthai { get; set; }
         public virtual KetQuaHocTap ketquahoctap { get; set; }
     }
 }

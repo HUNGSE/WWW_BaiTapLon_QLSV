@@ -60,9 +60,9 @@
     <Compile Include="Entities_BaiTapLon\LopHocPhan.cs" />
     <Compile Include="Entities_BaiTapLon\MonHoc.cs" />
     <Compile Include="Entities_BaiTapLon\SinhVien.cs" />
-    <Compile Include="Migrations\202006291540217_QLSV.cs" />
-    <Compile Include="Migrations\202006291540217_QLSV.designer.cs">
-      <DependentUpon>202006291540217_QLSV.cs</DependentUpon>
+    <Compile Include="Migrations\202006300633480_QLSV.cs" />
+    <Compile Include="Migrations\202006300633480_QLSV.designer.cs">
+      <DependentUpon>202006300633480_QLSV.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,8 +78,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202006291540217_QLSV.resx">
-      <DependentUpon>202006291540217_QLSV.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006300633480_QLSV.resx">
+      <DependentUpon>202006300633480_QLSV.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

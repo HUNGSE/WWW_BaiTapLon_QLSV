@@ -13,7 +13,7 @@ namespace EntityFrameWork_BaiTapLon.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202006291128130_QLSV"; }
+            get { return "202006300633480_QLSV"; }
         }
         
         string IMigrationMetadata.Source
