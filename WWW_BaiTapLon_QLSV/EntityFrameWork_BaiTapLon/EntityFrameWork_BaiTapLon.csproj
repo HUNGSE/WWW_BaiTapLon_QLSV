@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAcces\QLSVDatabaseContext.cs" />
+    <Compile Include="Entities_BaiTapLon\DiemDanh.cs" />
     <Compile Include="Entities_BaiTapLon\GiangVien.cs" />
     <Compile Include="Entities_BaiTapLon\HocKy.cs" />
     <Compile Include="Entities_BaiTapLon\KetQuaHocTap.cs" />
@@ -59,9 +60,9 @@
     <Compile Include="Entities_BaiTapLon\LopHocPhan.cs" />
     <Compile Include="Entities_BaiTapLon\MonHoc.cs" />
     <Compile Include="Entities_BaiTapLon\SinhVien.cs" />
-    <Compile Include="Migrations\202006250847271_SinhVien.cs" />
-    <Compile Include="Migrations\202006250847271_SinhVien.designer.cs">
-      <DependentUpon>202006250847271_SinhVien.cs</DependentUpon>
+    <Compile Include="Migrations\202007011732422_v1.cs" />
+    <Compile Include="Migrations\202007011732422_v1.designer.cs">
+      <DependentUpon>202007011732422_v1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,8 +72,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202006250847271_SinhVien.resx">
-      <DependentUpon>202006250847271_SinhVien.cs</DependentUpon>
+    <ProjectReference Include="..\ComMon_BaiTapLon\ComMon_BaiTapLon.csproj">
+      <Project>{BB95E970-7AD7-43C4-A66A-14AF44E1ACC9}</Project>
+      <Name>ComMon_BaiTapLon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202007011732422_v1.resx">
+      <DependentUpon>202007011732422_v1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiemDanhService.cs" />
     <Compile Include="GiangVienService.cs" />
     <Compile Include="HocKyService.cs" />
     <Compile Include="KetQuaHocTapService.cs" />
@@ -65,6 +66,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ComMon_BaiTapLon\ComMon_BaiTapLon.csproj">
+      <Project>{BB95E970-7AD7-43C4-A66A-14AF44E1ACC9}</Project>
+      <Name>ComMon_BaiTapLon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EntityFrameWork_BaiTapLon\EntityFrameWork_BaiTapLon.csproj">
       <Project>{B40275BD-D1FB-423B-96F7-4F8998E1BDAD}</Project>
       <Name>EntityFrameWork_BaiTapLon</Name>

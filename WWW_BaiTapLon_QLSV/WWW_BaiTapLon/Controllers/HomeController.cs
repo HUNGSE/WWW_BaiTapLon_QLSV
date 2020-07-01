@@ -14,9 +14,9 @@ namespace WWW_BaiTapLon.Controllers
         public ActionResult Index()
         {
             var diem = new KetQuaHocTap();
-            diem.LoaiDiem = (int)LoaiDiemEnum.CuoiKy;
+           // diem.LoaiDiem = (int)LoaiDiemEnum.CuoiKy;
             var gt = new SinhVien();
-            gt.Gioitinh = (GioitinhEnum.Khac).ToString();
+            gt.Gioitinh = (GioitinhEnum.Khac);
             return View();
         }
     }

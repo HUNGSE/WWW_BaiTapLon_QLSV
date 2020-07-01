@@ -20,5 +20,17 @@ namespace ComMon_BaiTapLon
             Nu=3,
             Khac=4
         }
+        public enum TrangThaiLHP
+        {
+            Cho_SV_dang_ki = 1,
+            Chap_Nhan_Mo_Lop = 2,
+            Cho_Huy_Lop = 3
+
+        }
+        public enum TrangThaiDD
+        {
+            CoMat = 1,
+            Vang = 2
+        }
     }
 }

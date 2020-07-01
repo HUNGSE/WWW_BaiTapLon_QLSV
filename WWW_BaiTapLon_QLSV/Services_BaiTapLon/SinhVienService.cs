@@ -61,5 +61,9 @@ namespace Services_BaiTapLon
             }
             return null;
         }
+        public List<SinhVien> GetSVByMaLopHP(int id)
+        {
+            return sinhVienRepository.GetByWhere(x => x.SinhVienId == id).ToList();
+        }
     }
 }

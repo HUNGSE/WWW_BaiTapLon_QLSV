@@ -34,6 +34,11 @@ namespace Services_BaiTapLon
             }
         }
 
+        public IEnumerable<LopHocPhan> GetLopHocPhansByID(int id)
+        {
+            return lopHocPhanrepository.GetByWhere(s => s.MonHocId == id);
+        }
+
         public IEnumerable<LopHocPhan> GetAll()
         {
             return lopHocPhanrepository.GetByWhere(s => true);
@@ -62,6 +67,11 @@ namespace Services_BaiTapLon
                 lopHocPhanrepository.Update(existing);
             }
             return null;
+        }
+
+        public List<LopHocPhan> GetLopHocPhanByGV(int id)
+        {
+            return lopHocPhanrepository.GetByWhere(x => x.GiangVienid == id).ToList();
         }
     }
 }

@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IBaseService.cs" />
+    <Compile Include="IDiemDanhService.cs" />
     <Compile Include="IGiangVienService.cs" />
     <Compile Include="IHocKyService.cs" />
     <Compile Include="IKetquahoctapService.cs" />
