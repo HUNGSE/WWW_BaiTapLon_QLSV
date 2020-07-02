@@ -18,10 +18,10 @@
 
 </head>
 <body class="sb-nav-fixed">
-    <nav class="sb-topnav navbar navbar-expand navbar-dark">
-        @Html.ActionLink("Quản lý sinh viên", "QuanLySinhVien", "QuanLySinhVien", new { area = "" }, new { @class = "navbar-brand", @style = "font-size: 1.7em;" })
-        @Html.ActionLink("Quản lý giảng viên", "QuanLyGiangVien", "QuanLyGiangVien", new { area = "" }, new { @class = "navbar-brand", @style = "font-size: 1.7em;" })
-        @Html.ActionLink("Quản lý lớp học phần", "QuanLyLopHocPhan", "QuanLyLopHocPhan", new { area = "" }, new { @class = "navbar-brand", @style = "font-size: 1.7em;" })
+    <nav @*class="sb-topnav navbar navbar-expand navbar-dark"*@>
+        @Html.ActionLink("Quản lý sinh viên", "SinhVien", "QuanLy", new { area = "" }, new { @class = "navbar-brand", @style = "font-size: 1.7em;" })
+        @*@Html.ActionLink("Quản lý giảng viên", "GiangVien", "QuanLy", new { area = "" }, new { @class = "navbar-brand", @style = "font-size: 1.7em;" })*@
+        @Html.ActionLink("Quản lý lớp học phần", "LopHocPhan", "QuanLy", new { area = "" }, new { @class = "navbar-brand", @style = "font-size: 1.7em;" })
 
         <!-- Navbar-->
         <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">

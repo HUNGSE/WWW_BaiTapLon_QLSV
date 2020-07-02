@@ -134,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DiemDanhController.cs" />
     <Compile Include="Controllers\GiangVienController.cs" />
     <Compile Include="Controllers\QuanLyController.cs" />
     <Compile Include="Controllers\SinhVienController.cs" />
@@ -158,6 +159,9 @@
     <Content Include="Views\GiangVien\DanhSachMonHoc.cshtml" />
     <Content Include="Views\QuanLy\LopHocPhan.cshtml" />
     <Content Include="Views\QuanLy\SinhVien.cshtml" />
+    <Content Include="Views\DiemDanh\DiemDanh_Index.cshtml" />
+    <Content Include="Views\DiemDanh\DiemDanh.cshtml" />
+    <Content Include="Views\DiemDanh\DanhSachDiemDanh.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

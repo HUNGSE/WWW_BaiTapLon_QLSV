@@ -71,7 +71,6 @@ namespace WWW_BaiTapLon.Controllers
 
         public JsonResult getDangKyHocPhan(int id)
         {
-
             LopHocPhanService lopHocPhan = new LopHocPhanService();
             KetQuaHocTapService kqhtsev = new KetQuaHocTapService();
             List<LopHocPhan> lopHocPhans = lopHocPhan.GetLopHocPhansByID(id).ToList();
